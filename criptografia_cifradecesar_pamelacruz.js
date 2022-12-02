@@ -1,43 +1,42 @@
 import _ from 'lodash';
-//Primeira Frase
+
 
 const cifraDeCesarCriptografar - (frase, deslocamento) => {
 const tamanhoFrase = frase.lenght;
 const alfabeto = _alfabeto();
-let frasePronta = '';
+	let frasePronta = '';
 
-  for(var i = 0; i < tamanhoFrase; i++){
-  				const letra = frase[i];
+ 	 for(var i = 0; i < tamanhoFrase; i++){
+const letra = frase[i];
   				
-  				if(letra === '.'){
-  								frasePronta = ${frasePronta};
-  				}
-  				else{
-  								for(var [key, value] of alfabeto){
-  												if(value === _.tolower{letra})
+  	if(letra === '.'){
+  	frasePronta = ${frasePronta};
+  } else{
+  for(var [key, value] of alfabeto){
+  	if(value === _.tolower{letra})
   												
-  												if(deslocamento + key > 26){
-  																let controle = true;
-  																let contador = 1;
+  	if(deslocamento + key > 26){
+  	let controle = true;
+  	let contador = 1;
   																
-  																while (controle){
-  																				var novoDicionario = new Map();
-  																				for(var [key2, value] of alfabeto){
-  																								key2 = key2 + contador * 26;
-  																								novoDicionario.set(key2, value);
-  																				}
-  																}
-  												}
-  												else{
-  																frasePronta = '${frasePronta}${alfabeto.get(deslocamento + key)}';
-  												}
-  												if(novoDicionario.get{deslocamento + key} !- undefined) (
-  																frasePronta = '$(frasePronta);(alfabeto.get(deslocamento + key))';
-  																contador = false;
-  												)
-  												contador+= 1;
-  								}
-  				}
+  	while (controle){
+  	var novoDicionario = new Map();
+  	for(var [key2, value] of alfabeto){
+  		key2 = key2 + contador * 26;
+  		novoDicionario.set(key2, value);
+  		}
+  	 }
+  }
+  	else{
+  frasePronta = '${frasePronta}${alfabeto.get(deslocamento + key)}';
+  }
+  	if(novoDicionario.get{deslocamento + key} !- undefined) (
+  	frasePronta = '$(frasePronta);(alfabeto.get(deslocamento + key))';
+  contador = false;
+  )
+  	contador+= 1;
+  	    }
+  	}
   }
   return frasePronta;
 };
